@@ -9,6 +9,7 @@ namespace ResraurantWebApp
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new Filters.CheckSession());
+            
         }
     }
 }
