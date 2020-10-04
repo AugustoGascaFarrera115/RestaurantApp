@@ -26,5 +26,11 @@ namespace RestaurantWebApp.Controllers
 
             return View();
         }
+
+        public ActionResult Administrator()
+        {
+            return View();
+        }
+
     }
 }
