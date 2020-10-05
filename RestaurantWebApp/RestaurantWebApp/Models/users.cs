@@ -11,14 +11,23 @@ namespace RestaurantWebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class users
     {
         public int id { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public int idRol { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string name { get; set; }
         public string lastName { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string email { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string password { get; set; }
     
         public virtual roles roles { get; set; }

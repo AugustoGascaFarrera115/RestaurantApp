@@ -38,6 +38,15 @@ namespace RestaurantWebApp.Controllers
         [HttpPost]
         public ActionResult AddOrEdit(users user)
         {
+            using(skfEntities db = new skfEntities())
+            {
+                db.users.Add(user);
+                db.SaveChanges();
+                return Json(new { sucess = true, message = "Registro añadido exitosamente" },JsonRequestBehavior.AllowGet);
+            }
+
+
+
             return View();
         }
 

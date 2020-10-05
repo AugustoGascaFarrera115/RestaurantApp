@@ -54,7 +54,7 @@
         $(document).ready(function () {
             dataTable = $('#employeeTable').DataTable({
                 "ajax": {
-                    "url": "./Controllers/Administrator/GetData",
+                    "url": "Administrator/GetData",
                     "type": "GET",
                     "datatype": "json"
                 },
@@ -79,7 +79,7 @@
 
                 Popup = formDiv.dialog({
                     autoOpen: true,
-                    resizable: false,
+                    resizable: true,
                     title: 'Detalles de Usurio',
                     height: 400,
                     width: 300,
@@ -90,6 +90,28 @@
                     }
                 });
             });
+        }
+
+        function SubmitForm(form) {
+
+            $.validator.unobtrusive.parse(form);
+
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+
+                        if (data.success == true) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+                        }
+
+                    }
+                });
+            }
+            return false;
         }
 
     </script>
