@@ -21,8 +21,12 @@ namespace RestaurantWebApp.Controllers
         {
             try
             {
+                //ActionResult red = null;
+
                 using (Models.skfEntities db = new Models.skfEntities())
                 {
+
+                    
 
                     var oUser = (from r in db.users
                                  where r.email == user.Trim() && r.password == password.Trim()
@@ -38,12 +42,24 @@ namespace RestaurantWebApp.Controllers
                     Session["user"] = oUser;
 
 
+
+                    //var oRolA = from r in db.roles where r.name == "administrador" select r;
+
+
+                    //if (oRolA.ToString() == "administrador")
+                    //{
+                    //     red = RedirectToAction("Administrator", "Home");
+                    //}
+
+                   
                 }
 
 
-
+                //return red;
 
                 return RedirectToAction("Administrator", "Home");
+
+                
             }
             catch (Exception ex)
             {

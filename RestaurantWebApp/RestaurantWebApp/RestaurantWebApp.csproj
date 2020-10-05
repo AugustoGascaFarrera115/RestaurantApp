@@ -130,8 +130,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccessController.cs" />
     <Compile Include="Controllers\AdministratorController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WaiterController.cs" />
+    <Compile Include="Files\AuthorizeUser.cs" />
     <Compile Include="Files\CheckSession.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -225,10 +229,16 @@
     <Content Include="Views\Error\UnauthorizedOperation.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Home\Administrator.cshtml" />
+    <Content Include="Views\Home\Chef.cshtml" />
+    <Content Include="Views\Home\Waiter.cshtml" />
+    <Content Include="Views\Home\Client.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Chef\" />
+    <Folder Include="Views\Client\" />
     <Folder Include="Views\RestaurantViews\" />
+    <Folder Include="Views\Waiter\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using RestaurantWebApp.Files;
 
 namespace RestaurantWebApp.Controllers
 {
-    public class AdministratorController : Controller
+    public class WaiterController : Controller
     {
-
-        
-        public ActionResult Administrator()
+        // GET: Waiter
+        public ActionResult Index()
         {
             return View();
         }
-
-
     }
 }

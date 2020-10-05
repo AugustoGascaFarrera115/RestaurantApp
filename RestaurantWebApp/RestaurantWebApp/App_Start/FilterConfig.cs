@@ -8,7 +8,7 @@ namespace RestaurantWebApp
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new Files.CheckSession());
+            //filters.Add(new Files.CheckSession());
         }
     }
 }
